@@ -1,0 +1,12 @@
+0,A,word A
+1,B,word B
+2,C,word C
+3,D,word D
+4,E,word E
+5,F,word F
+7,G,word G
+8,H,word H
+9,I,word I
+10,J,word J
+11,K,word K
+12,L,word L
