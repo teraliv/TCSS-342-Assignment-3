@@ -2,7 +2,7 @@
  *  WordNet.java
  *  TCSS 342 - Autumn 2015
  *
- *  Assignment 2 - WordNet.
+ *  Assignment 3 - WordNet.
  *  Alex Terikov (teraliv@uw.edu)
  *  12/8/15
  */
@@ -51,6 +51,7 @@ public class WordNet {
         readSynsets(synsets);
     }
 
+
     /**
      * A method to return all WordNet nouns.
      *
@@ -59,6 +60,7 @@ public class WordNet {
     public Iterable<String> nouns() {
         return nounsMap.keySet();
     }
+
 
     /**
      * A method to check if the word a WordNet noun.
@@ -69,6 +71,7 @@ public class WordNet {
     public boolean isNoun(String word) {
         return nounsMap.containsKey(word);
     }
+
 
     /**
      * A method to get distance between nounA and nounB. Distance
@@ -86,10 +89,9 @@ public class WordNet {
         int idA = nounsMap.get(nounA);
         int idB = nounsMap.get(nounB);
 
-        int distance = sap.length(idA, idB);
-
-        return  distance;
+        return sap.length(idA, idB);
     }
+
 
     /**
      *  A method to get a synset that is the common ancestor
@@ -106,10 +108,9 @@ public class WordNet {
         int idA = nounsMap.get(nounA);
         int idB = nounsMap.get(nounB);
 
-        String ancestor = nounsID.get(sap.ancestor(idA, idB));
-
-        return ancestor;
+        return nounsID.get(sap.ancestor(idA, idB));
     }
+
 
     /**
      * A helper method to read sysets data.

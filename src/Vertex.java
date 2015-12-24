@@ -2,7 +2,7 @@
  *  Vertex.java
  *  TCSS 342 - Autumn 2015
  *
- *  Assignment 2 - WordNet.
+ *  Assignment 3 - WordNet.
  *  Alex Terikov (teraliv@uw.edu)
  *  12/8/15
  */

@@ -2,7 +2,7 @@
  *  SAP.java
  *  TCSS 342 - Autumn 2015
  *
- *  Assignment 2 - WordNet.
+ *  Assignment 3 - WordNet.
  *  Alex Terikov (teraliv@uw.edu)
  *  12/8/15
  */
@@ -60,7 +60,7 @@ public class SAP {
      */
     public int ancestor(int theV, int theW) {
 
-        int result = -1;
+        int result;
 
         List<Vertex> ancestorsV = getAncestors(theV);
         List<Vertex> ancestorsW = getAncestors(theW);
@@ -71,7 +71,8 @@ public class SAP {
         // find common ancestors
         for (Vertex v : ancestorsV) {
             for (Vertex w : ancestorsW) {
-                if (v.id == w.id) {
+                //if (v.id == w.id) {
+                if (v.id.equals(w.id)) {
 
                     // do not add common ancestors that appear multiple times
                     if (!ancestors.contains(v.id))
